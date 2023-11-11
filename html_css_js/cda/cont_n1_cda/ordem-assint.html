@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/html_css_js/css/main.css" />
+
+    <title>PARADIGMAS DE PROGRAMAÇÃO</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="top-options">
+            <a href="/index.html">Home</a>
+            <nav class="navbar navbar-expand-lg drop-btn">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Conteúdo N1
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item"
+                                            href="/html_css_js/cda/cont_n1_cda/ordem-assint.html">Ordem assintótica
+                                            (notações)</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/html_css_js/cda/cont_n1_cda/comp-pess.html">Complexidade
+                                            Pessimista</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg drop-btn">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Conteúdo N2
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item"
+                                            href="/html_css_js/cda/cont_n2_cda/alg-gul.html">Algoritmos Gulosos</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/html_css_js/cda/cont_n2_cda/div-p-conq.html">Dividir para
+                                            conquistar</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/html_css_js/cda/cont_n2_cda/comp-de-prob.html">Complexidade de
+                                            Problemas</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/html_css_js/cda/cont_n2_cda/p-np-npc.html">Classes P, NP e NP-Completo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <a href="/html_css_js/compilador.html">Compilador</a>
+        </div>
+
+    </header>
+
+    <div class="body-content">
+        <div class="body-content-text">
+            <h1>Ordem assintótica (notações)</h1>
+            <p class="espacamento"><strong>Notação Assintótica</strong> é uma linguagem que nos permite analisar o tempo de execução de um algoritmo através da identificação de seu comportamento com o crescimento da entrada oferecida. Isso também é conhecido como taxa de crescimento do algoritmo.
+            </p>
+            <p class="espacamento">
+                Descrevemos como Notação Assintótica identifica o comportamento de um algoritmo à medida que o tamanho da entrada cresce. Para dado algoritmo f, com entrada de tamanho n, você terá tempo de execução f(n). Isto resulta em um gráfico onde a coordenada Y é o tempo de execução, a coordenada X representa o tamanho da entrada e os pontos representam o tempo de execução para dado tamanho de entrada.
+            </p>
+            <p class="espacamento">
+                Um algoritmo pode ser representado nas formas de Melhor Caso, Pior Caso ou Caso Médio. A maneira mais comum de analisar um algoritmo é pelo Pior Caso.
+            </p>
+            <h3>Tipos de funções, limites e simplificação:</h3>
+            <h6>- Função Logarítmica - <i>log n</i></h6>
+            <h6>- Função Linear - <i>an + b</i></h6>
+            <h6>- Função Quadrática - <i>an<sup>2</sup>+bn+c</i></h6>
+            <h6>- Função Polinomial - <i>an<sup>z</sup>+...+an<sup>2</sup>+an<sup>1</sup>+an<sup>0</sup>, onde "z" é uma constante</i>
+            </h6>
+            <h6>- Função Exponencial -  <i>a<sup>n</sup>, onde "a" é alguma constante</i></h6>
+            <p class="espacamento">
+                Estas são as funções básicas de crescimento usadas em várias notações. Uma nota extremamente importante para notações é tentar usar os termos mais simples. Isto significa descartar constantes e termos de ordem baixa, pois quando o tamanho da entrada cresce para o infinito (limites matemáticos), os termos de ordem mais baixa e constantes tornam-se irrelevantes. Por exemplo, se você tiver uma constante muito grande, 2<sup>9001</sup>, a simplificação não afetará sua notação.
+            </p>
+
+            <h4>Big O</h4>
+            <p class="espacamento">
+                A notação Big O é usada para descrever o limite superior assintótico da complexidade de um algoritmo. Isso significa que ela descreve o número máximo de operações que um algoritmo pode realizar, independentemente do tamanho dos dados de entrada.
+            </p>
+            <p class="espacamento">
+                Por exemplo, o algoritmo de ordenação quicksort tem uma complexidade de Big Omega(n log(n)). Isso significa que, no melhor caso, o algoritmo precisará executar n log(n) operações para ordenar uma lista de n elementos.
+            </p>
+
+            <h4>Big Theta</h4>
+            <p class="espacamento">
+                A notação Big Theta é usada para descrever a complexidade exata de um algoritmo. Isso significa que ela descreve o número de operações que um algoritmo realiza, independentemente do tamanho dos dados de entrada.
+            </p>
+            <p class="espacamento">
+                Por exemplo, o algoritmo de ordenação mergesort tem uma complexidade de Big Theta(n log(n)). Isso significa que o algoritmo precisará executar n log(n) operações, independentemente do tamanho dos dados de entrada
+            </p>
+
+            <h3>Diferença entre Big O, Big Omega e Big Theta</h3>
+            <p class="espacamento">
+                O Big Omega é útil para descrever algoritmos que são muito eficientes, pois ela garante que o algoritmo realizará um número mínimo de operações, independentemente do tamanho dos dados de entrada.
+            </p>
+            <p class="espacamento">
+                O A Big Theta é útil para descrever algoritmos que possuem uma complexidade bem definida, independentemente do tamanho dos dados de entrada.
+            </p>
+            
+            <h5>Referências</h5>
+            <p>
+                Learn X in Y minutes: Scenic programming language tours. Disponível em: <a href="https://learnxinyminutes.com/docs/pt-br/asymptotic-notation-pt/">https://learnxinyminutes.com/docs/pt-br/asymptotic-notation-pt/</a>. Acesso em: 11 nov. 2023.
+            </p>
+            <p>
+                Google Bard - Ferramenta do Google de Chat de IA Generativa. Disponível em: <a href="https://bard.google.com/chat/8ecee40aa76e48d1?hl=pt_BR">https://bard.google.com/chat/8ecee40aa76e48d1?hl=pt_BR</a>. Acesso em: 11 nov. 2023.
+            </p>
+
+        </div>
+        <div class="body-content-img">
+            <img id="img-page-home" src="/images/img-ord-assin.png">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
